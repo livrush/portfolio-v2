@@ -1,0 +1,282 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 5, ../../../.rvm/gems/ruby-2.6.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../.rvm/gems/ruby-2.6.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../.rvm/gems/ruby-2.6.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../.rvm/gems/ruby-2.6.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../.rvm/gems/ruby-2.6.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../.rvm/gems/ruby-2.6.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../.rvm/gems/ruby-2.6.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../.rvm/gems/ruby-2.6.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../.rvm/gems/ruby-2.6.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+@keyframes fade-in--down-right {
+  from {
+    transform: translate(-60%, -60%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+}
+@keyframes shadow-slide--pos {
+  from {
+    top: 0;
+    left: 0;
+  }
+  to {
+    top: 1.5rem;
+    left: 1.5rem;
+  }
+}
+@keyframes shadow-slide--neg {
+  from {
+    top: 0;
+    left: 0;
+  }
+  to {
+    top: -1.5rem;
+    left: -1.5rem;
+  }
+}
+@keyframes grow {
+  0% {
+    height: 0;
+    width: 0;
+    transform: rotate(0);
+  }
+  20% {
+    height: 100px;
+    width: 100px;
+    transform: rotate(0);
+  }
+  40% {
+    height: 150px;
+    width: 150px;
+    transform: rotate(51.5deg);
+  }
+  60% {
+    height: 200px;
+    width: 200px;
+    transform: rotate(103deg);
+  }
+  80% {
+    height: 250px;
+    width: 250px;
+    transform: rotate(154.5deg);
+  }
+  100% {
+    height: 300px;
+    width: 300px;
+    transform: rotate(206deg);
+  }
+}
+/* line 1, ../sass/_helpers.scss */
+.text-right, .about-me-name {
+  text-align: right;
+}
+
+/* line 11, ../sass/about.scss */
+.about-page {
+  background: #222222;
+  color: #fafafa;
+  font-family: 'Abril Fatface', cursive;
+}
+
+/* line 17, ../sass/about.scss */
+.title, .about-me, .about-me-name {
+  font-size: 2rem;
+  letter-spacing: 0.5rem;
+  z-index: 100;
+}
+
+/* line 24, ../sass/about.scss */
+.about-me {
+  position: absolute;
+  top: 5rem;
+  left: 5rem;
+}
+
+/* line 31, ../sass/about.scss */
+.about-me-name {
+  position: absolute;
+  bottom: 5rem;
+  right: 5rem;
+}
+
+/* line 44, ../sass/about.scss */
+.page-center, .image-container, .tidbit, .sept-container {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* line 51, ../sass/about.scss */
+.fade-in--slow-right--animation, .image-container, .tidbit {
+  animation-name: fade-in--down-right;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+/* line 62, ../sass/about.scss */
+.corner {
+  height: 4rem;
+  width: 4rem;
+  position: absolute;
+  background: #fafafa;
+}
+/* line 67, ../sass/about.scss */
+.corner.top {
+  top: 0;
+}
+/* line 68, ../sass/about.scss */
+.corner.left {
+  left: 0;
+}
+/* line 69, ../sass/about.scss */
+.corner.right {
+  right: 0;
+}
+/* line 70, ../sass/about.scss */
+.corner.bottom {
+  bottom: 0;
+}
+
+/* line 73, ../sass/about.scss */
+.image-container {
+  align-items: center;
+  border: 5px solid #fafafa;
+  display: flex;
+  justify-content: center;
+}
+
+/* line 83, ../sass/about.scss */
+.image {
+  background-color: #fafafa;
+  background-image: url("/images/about/blue.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 20rem;
+  width: 30rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* line 94, ../sass/about.scss */
+.image-shadow {
+  background: #fafafa;
+  position: absolute;
+  height: 20rem;
+  width: 30rem;
+  animation-delay: 0.5s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+/* line 99, ../sass/about.scss */
+.image-shadow.top {
+  animation-name: shadow-slide--pos;
+}
+/* line 102, ../sass/about.scss */
+.image-shadow.bottom {
+  animation-name: shadow-slide--neg;
+}
+
+/* line 112, ../sass/about.scss */
+.tidbit {
+  animation-delay: 0.5s;
+  color: #222;
+  font-family: 'Abril Fatface';
+  font-size: 9vh;
+  letter-spacing: .5rem;
+  line-height: 1.2;
+  opacity: 0;
+  text-align: center;
+  width: 100%;
+  z-index: 5;
+}
+
+/* line 128, ../sass/about.scss */
+.sept-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 135, ../sass/about.scss */
+.sept {
+  position: absolute;
+  animation-name: grow;
+  animation-duration: 6s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+}
+/* line 142, ../sass/about.scss */
+.sept.delay-1 {
+  animation-delay: 1s;
+}
+/* line 145, ../sass/about.scss */
+.sept.delay-2 {
+  animation-delay: 2s;
+}

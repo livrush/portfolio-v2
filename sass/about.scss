@@ -1,0 +1,148 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "_animations";
+@import "_helpers";
+@import "_variables";
+
+.about-page {
+  background: $black;
+  color: $white;
+  font-family: 'Abril Fatface', cursive;
+}
+
+.title {
+  font-size: 2rem;
+  letter-spacing: 0.5rem;
+  z-index: 100;
+}
+
+
+.about-me {
+  @extend .title;
+  position: absolute;
+  top: 5rem;
+  left: 5rem;
+}
+
+.about-me-name {
+  @extend .title;
+  @extend .text-right;
+  position: absolute;
+  bottom: 5rem;
+  right: 5rem;
+}
+
+
+
+
+
+
+.page-center {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.fade-in--slow-right--animation {
+  animation-name: fade-in--down-right;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+
+
+
+
+.corner {
+  height: 4rem;
+  width: 4rem;
+  position: absolute;
+  background: $white;
+  &.top { top: 0; }
+  &.left { left: 0; }
+  &.right { right: 0; }
+  &.bottom { bottom: 0; }
+}
+
+.image-container {
+  @extend .page-center;
+  @extend .fade-in--slow-right--animation;
+
+  align-items: center;
+  border: 5px solid $white;
+  display: flex;
+  justify-content: center;
+}
+
+.image {
+  background-color: $white;
+  background-image: url('/images/about/blue.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 20rem;
+  width: 30rem;
+  position: relative;
+  z-index: 1;
+}
+
+.image-shadow {
+  background: $white;
+  position: absolute;
+  height: 20rem;
+  width: 30rem;
+  &.top {
+    animation-name: shadow-slide--pos;
+  }
+  &.bottom {
+    animation-name: shadow-slide--neg;
+  }
+
+  animation-delay: 0.5s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+.tidbit {
+  @extend .page-center;
+  @extend .fade-in--slow-right--animation;
+  animation-delay: 0.5s;
+
+  color: #222;
+  font-family: 'Abril Fatface';
+  font-size: 9vh;
+  letter-spacing: .5rem;
+  line-height: 1.2;
+  opacity: 0;
+  text-align: center;
+  width: 100%;
+  z-index: 5;
+}
+
+.sept-container {
+  @extend .page-center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sept {
+  position: absolute;
+  animation-name: grow;
+  animation-duration: 6s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  &.delay-1 {
+    animation-delay: 1s;
+  }
+  &.delay-2 {
+    animation-delay: 2s;
+  }
+}
