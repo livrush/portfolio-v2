@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="about-page">
+<html lang="en" id="about-page" class="about-page">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,21 +14,17 @@
   <div class="corner bottom left"></div>
   <div class="corner bottom right"></div>
   <script src="https://cdn.jsdelivr.net/npm/@mojs/core@latest/build/mo.min.js"></script>
-  <h1 class="title about-me">About Me</h1>
+  <h1 class="title about-me">About</h1>
   <h1 class="title about-me-name">Olivia<br/>Sabo-Rush</h1>
   <div id="septagon"></div>
   <script>(function Septagon() {var colors=["#cf9c9c","#e5ba9c","#ddd0af","#bdcec0","#AADBFF","#b4a7ca","#222"],sizes=[168,150,134,120,108,96,86].reverse();colors.forEach((e,o)=>{var a=new mojs.Shape({parent:"#septagon",shape:"polygon",points:7,fill:e,stroke:"#fafafa",strokeWidth:3,radius:0,delay:500*o,duration:250}),n=colors.length-o;for(var e=0;e<n;e++)a.then({duration:250}).then({angle:360/14*e,duration:250,radius:sizes[e]});a.then({duration:250}).then({angle:180+360/14*n,duration:500}),a.play()});})()</script>
-  <script src="/js/about.js"></script>
   <div class="about-info-container">
-    <h1 class="tidbit">
-      Featured in the
-      <br/>
-      New York Times as
-      <br/>
-      a woman working
-      <br/>
-      to elect women
-    </h1>
+    <div id="tidbit-container" class="tidbit-container animated">
+      <p class="tidbit-line">Featured in the</p>
+      <p class="tidbit-line">New York Times as</p>
+      <p class="tidbit-line">a woman working</p>
+      <p class="tidbit-line">to elect women</p>
+    </div>
     <div class="image-container">
       <div id="tidbit-image" class="image"></div>
       <div class="image-shadow top"></div>
@@ -36,6 +32,10 @@
     </div>
   </div>
 
-
+  <script src="/js/about.js"></script>
+  <script>
+    toggleSeptagon();
+    changeBackgroundColor('blue');
+  </script>
 </body>
 </html>
