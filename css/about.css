@@ -162,7 +162,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   right: 5rem;
 }
 
-/* line 44, ../sass/about.scss */
+/* line 40, ../sass/about.scss */
+.about-info-container {
+  display: none;
+}
+
+/* line 46, ../sass/about.scss */
 .page-center, .image-container, .tidbit, .sept-container {
   left: 50%;
   position: absolute;
@@ -170,7 +175,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   transform: translate(-50%, -50%);
 }
 
-/* line 51, ../sass/about.scss */
+/* line 53, ../sass/about.scss */
 .fade-in--slow-right--animation, .image-container, .tidbit {
   animation-name: fade-in--down-right;
   animation-duration: 1s;
@@ -178,31 +183,31 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   animation-iteration-count: 1;
 }
 
-/* line 62, ../sass/about.scss */
+/* line 64, ../sass/about.scss */
 .corner {
   height: 4rem;
   width: 4rem;
   position: absolute;
   background: #fafafa;
 }
-/* line 67, ../sass/about.scss */
+/* line 69, ../sass/about.scss */
 .corner.top {
   top: 0;
 }
-/* line 68, ../sass/about.scss */
+/* line 70, ../sass/about.scss */
 .corner.left {
   left: 0;
 }
-/* line 69, ../sass/about.scss */
+/* line 71, ../sass/about.scss */
 .corner.right {
   right: 0;
 }
-/* line 70, ../sass/about.scss */
+/* line 72, ../sass/about.scss */
 .corner.bottom {
   bottom: 0;
 }
 
-/* line 73, ../sass/about.scss */
+/* line 75, ../sass/about.scss */
 .image-container {
   align-items: center;
   border: 5px solid #fafafa;
@@ -210,7 +215,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   justify-content: center;
 }
 
-/* line 83, ../sass/about.scss */
+/* line 85, ../sass/about.scss */
 .image {
   background-color: #fafafa;
   background-image: url("/images/about/blue.jpg");
@@ -222,7 +227,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   z-index: 1;
 }
 
-/* line 94, ../sass/about.scss */
+/* line 96, ../sass/about.scss */
 .image-shadow {
   background: #fafafa;
   position: absolute;
@@ -233,16 +238,16 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   animation-fill-mode: forwards;
   animation-iteration-count: 1;
 }
-/* line 99, ../sass/about.scss */
+/* line 101, ../sass/about.scss */
 .image-shadow.top {
   animation-name: shadow-slide--pos;
 }
-/* line 102, ../sass/about.scss */
+/* line 104, ../sass/about.scss */
 .image-shadow.bottom {
   animation-name: shadow-slide--neg;
 }
 
-/* line 112, ../sass/about.scss */
+/* line 114, ../sass/about.scss */
 .tidbit {
   animation-delay: 0.5s;
   color: #222;
@@ -256,14 +261,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   z-index: 5;
 }
 
-/* line 128, ../sass/about.scss */
+/* line 130, ../sass/about.scss */
 .sept-container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* line 135, ../sass/about.scss */
+/* line 137, ../sass/about.scss */
 .sept {
   position: absolute;
   animation-name: grow;
@@ -272,11 +277,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   animation-iteration-count: 1;
   animation-timing-function: ease-in;
 }
-/* line 142, ../sass/about.scss */
+/* line 144, ../sass/about.scss */
 .sept.delay-1 {
   animation-delay: 1s;
 }
-/* line 145, ../sass/about.scss */
+/* line 147, ../sass/about.scss */
 .sept.delay-2 {
   animation-delay: 2s;
 }
