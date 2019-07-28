@@ -129,6 +129,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     transform: rotate(206deg);
   }
 }
+@keyframes blur {
+  from {
+    filter: blur(0);
+  }
+  to {
+    filter: blur(1px);
+  }
+}
 /* line 1, ../sass/_helpers.scss */
 .text-right, .about-me-name {
   text-align: right;
@@ -139,83 +147,85 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   background: #222222;
   color: #fafafa;
   font-family: 'Abril Fatface', cursive;
+  transition: 500ms;
 }
 
-/* line 17, ../sass/about.scss */
+/* line 18, ../sass/about.scss */
 .title, .about-me, .about-me-name {
   font-size: 2rem;
   letter-spacing: 0.5rem;
   z-index: 100;
 }
 
-/* line 24, ../sass/about.scss */
+/* line 25, ../sass/about.scss */
 .about-me {
   position: absolute;
   top: 5rem;
   left: 5rem;
 }
 
-/* line 31, ../sass/about.scss */
+/* line 32, ../sass/about.scss */
 .about-me-name {
   position: absolute;
   bottom: 5rem;
   right: 5rem;
 }
 
-/* line 40, ../sass/about.scss */
+/* line 41, ../sass/about.scss */
 .about-info-container {
   display: none;
 }
 
-/* line 46, ../sass/about.scss */
-.page-center, .image-container, .tidbit, .sept-container {
+/* line 47, ../sass/about.scss */
+.page-center, .image-container, .tidbit-container, .sept-container {
   left: 50%;
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
 }
 
-/* line 53, ../sass/about.scss */
-.fade-in--slow-right--animation, .image-container, .tidbit {
+/* line 54, ../sass/about.scss */
+.fade-in--slow-right--animation, .image-container, .tidbit-container.animated {
   animation-name: fade-in--down-right;
   animation-duration: 1s;
   animation-fill-mode: forwards;
   animation-iteration-count: 1;
 }
 
-/* line 64, ../sass/about.scss */
+/* line 65, ../sass/about.scss */
 .corner {
   height: 4rem;
   width: 4rem;
   position: absolute;
   background: #fafafa;
 }
-/* line 69, ../sass/about.scss */
+/* line 70, ../sass/about.scss */
 .corner.top {
   top: 0;
 }
-/* line 70, ../sass/about.scss */
+/* line 71, ../sass/about.scss */
 .corner.left {
   left: 0;
 }
-/* line 71, ../sass/about.scss */
+/* line 72, ../sass/about.scss */
 .corner.right {
   right: 0;
 }
-/* line 72, ../sass/about.scss */
+/* line 73, ../sass/about.scss */
 .corner.bottom {
   bottom: 0;
 }
 
-/* line 75, ../sass/about.scss */
+/* line 76, ../sass/about.scss */
 .image-container {
   align-items: center;
+  background: #fafafa;
   border: 5px solid #fafafa;
   display: flex;
   justify-content: center;
 }
 
-/* line 85, ../sass/about.scss */
+/* line 87, ../sass/about.scss */
 .image {
   background-color: #fafafa;
   background-image: url("/images/about/blue.jpg");
@@ -225,9 +235,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   width: 30rem;
   position: relative;
   z-index: 1;
+  animation-name: blur;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
 }
 
-/* line 96, ../sass/about.scss */
+/* line 104, ../sass/about.scss */
 .image-shadow {
   background: #fafafa;
   position: absolute;
@@ -238,37 +252,45 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   animation-fill-mode: forwards;
   animation-iteration-count: 1;
 }
-/* line 101, ../sass/about.scss */
+/* line 109, ../sass/about.scss */
 .image-shadow.top {
   animation-name: shadow-slide--pos;
 }
-/* line 104, ../sass/about.scss */
+/* line 112, ../sass/about.scss */
 .image-shadow.bottom {
   animation-name: shadow-slide--neg;
 }
 
-/* line 114, ../sass/about.scss */
-.tidbit {
+/* line 122, ../sass/about.scss */
+.tidbit-container {
+  opacity: 0;
+  width: 100%;
+  z-index: 5;
+}
+/* line 123, ../sass/about.scss */
+.tidbit-container.animated {
   animation-delay: 0.5s;
+}
+
+/* line 133, ../sass/about.scss */
+.tidbit-line {
   color: #222;
   font-family: 'Abril Fatface';
   font-size: 9vh;
   letter-spacing: .5rem;
   line-height: 1.2;
-  opacity: 0;
   text-align: center;
-  width: 100%;
-  z-index: 5;
+  text-shadow: 2px 2px #fafafa;
 }
 
-/* line 130, ../sass/about.scss */
+/* line 143, ../sass/about.scss */
 .sept-container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* line 137, ../sass/about.scss */
+/* line 150, ../sass/about.scss */
 .sept {
   position: absolute;
   animation-name: grow;
@@ -277,11 +299,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   animation-iteration-count: 1;
   animation-timing-function: ease-in;
 }
-/* line 144, ../sass/about.scss */
+/* line 157, ../sass/about.scss */
 .sept.delay-1 {
   animation-delay: 1s;
 }
-/* line 147, ../sass/about.scss */
+/* line 160, ../sass/about.scss */
 .sept.delay-2 {
   animation-delay: 2s;
 }

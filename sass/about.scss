@@ -12,6 +12,7 @@
   background: $black;
   color: $white;
   font-family: 'Abril Fatface', cursive;
+  transition: 500ms;
 }
 
 .title {
@@ -77,6 +78,7 @@
   @extend .fade-in--slow-right--animation;
 
   align-items: center;
+  background: $white;
   border: 5px solid $white;
   display: flex;
   justify-content: center;
@@ -91,6 +93,12 @@
   width: 30rem;
   position: relative;
   z-index: 1;
+
+  animation-name: blur;
+  // animation-delay: 1s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
 }
 
 .image-shadow {
@@ -111,20 +119,25 @@
   animation-iteration-count: 1;
 }
 
-.tidbit {
+.tidbit-container {
+  &.animated {
+    @extend .fade-in--slow-right--animation;
+    animation-delay: 0.5s;
+  }
   @extend .page-center;
-  @extend .fade-in--slow-right--animation;
-  animation-delay: 0.5s;
+  opacity: 0;
+  width: 100%;
+  z-index: 5;
+}
 
+.tidbit-line {
   color: #222;
   font-family: 'Abril Fatface';
   font-size: 9vh;
   letter-spacing: .5rem;
   line-height: 1.2;
-  opacity: 0;
   text-align: center;
-  width: 100%;
-  z-index: 5;
+  text-shadow: 2px 2px $white;
 }
 
 .sept-container {

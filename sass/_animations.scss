@@ -63,3 +63,12 @@
     transform: rotate(206deg);
   }
 }
+
+@keyframes blur {
+  from {
+    filter: blur(0);
+  }
+  to {
+    filter: blur(1px);
+  }
+}
