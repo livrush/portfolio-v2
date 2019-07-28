@@ -1,0 +1,16 @@
+
+<svg width="440px" height="428px" viewBox="0 0 440 428" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(-2.000000, 3.000000)" stroke="#FFFFFF" stroke-width="5">
+            <polygon id="Polygon" fill="#FF3F3F" points="222 0 395.566589 83.585264 438.433997 271.399647 318.32219 422.015089 125.67781 422.015089 5.5660035 271.399647 48.4334109 83.585264"></polygon>
+            <polygon id="Polygon-Copy" fill="#FF5F5F" transform="translate(222.000000, 222.000000) scale(1, -1) translate(-222.000000, -222.000000) " points="222 22 378.366296 97.3020396 416.985582 266.504187 308.776748 402.193774 135.223252 402.193774 27.0144176 266.504187 65.6337035 97.3020396"></polygon>
+            <polygon id="Polygon-Copy-2" fill="#FF7F7F" points="222 42 362.729667 109.771836 397.487024 262.053768 300.099073 384.174396 143.900927 384.174396 46.5129758 262.053768 81.2703332 109.771836"></polygon>
+            <polygon id="Polygon-Copy-3" fill="#FFAFAF" transform="translate(222.000000, 222.000000) scale(1, -1) translate(-222.000000, -222.000000) " points="222 60 348.6567 120.994652 379.938322 258.048391 292.289166 367.956957 151.710834 367.956957 64.0616782 258.048391 95.3432998 120.994652"></polygon>
+            <polygon id="Polygon-Copy-4" fill="#FFCFCF" points="222 76 336.147396 130.970489 364.339475 254.488056 285.347026 353.541455 158.652974 353.541455 79.6605248 254.488056 107.852604 130.970489"></polygon>
+            <polygon id="Polygon-Copy-5" fill="#FFEFEF" transform="translate(222.000000, 222.000000) scale(1, -1) translate(-222.000000, -222.000000) " points="222 92 323.638093 140.946326 348.740629 250.927721 278.404886 339.125953 165.595114 339.125953 95.2593714 250.927721 120.361907 140.946326"></polygon>
+            <path d="M222,352 L222,222" id="Line" stroke-linecap="square"></path>
+            <path d="M94,192.5 L221,222" id="Line-Copy" stroke-linecap="square"></path>
+            <path d="M350,192.5 L223,222" id="Line-Copy-2" stroke-linecap="square"></path>
+        </g>
+    </g>
+</svg>
