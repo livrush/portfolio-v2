@@ -161,25 +161,3 @@
     cursor: pointer;
   }
 }
-
-.sept-container {
-  @extend .page-center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.sept {
-  position: absolute;
-  animation-name: grow;
-  animation-duration: 6s;
-  animation-fill-mode: forwards;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-in;
-  &.delay-1 {
-    animation-delay: 1s;
-  }
-  &.delay-2 {
-    animation-delay: 2s;
-  }
-}

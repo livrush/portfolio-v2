@@ -177,7 +177,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 /* line 47, ../sass/about.scss */
-.page-center, .corner-button, .tidbit-image-section-container, .tidbit-container, .sept-container {
+.page-center, .corner-button, .tidbit-image-section-container, .tidbit-container {
   left: 50%;
   position: absolute;
   top: 50%;
@@ -305,29 +305,4 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /* line 160, ../sass/about.scss */
 .septagon:hover {
   cursor: pointer;
-}
-
-/* line 165, ../sass/about.scss */
-.sept-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* line 172, ../sass/about.scss */
-.sept {
-  position: absolute;
-  animation-name: grow;
-  animation-duration: 6s;
-  animation-fill-mode: forwards;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-in;
-}
-/* line 179, ../sass/about.scss */
-.sept.delay-1 {
-  animation-delay: 1s;
-}
-/* line 182, ../sass/about.scss */
-.sept.delay-2 {
-  animation-delay: 2s;
 }
