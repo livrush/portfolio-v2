@@ -78,7 +78,7 @@ function changeBackgroundColor(color) {
 }
 
 function changeImage(color) {
-  document.getElementById('tidbit-image').style.backgroundImage = `url('/images/about/${color}.jpg')`;
+  document.getElementById('tidbit-image').style.backgroundImage = `url('../images/about/${color}.jpg')`;
 }
 
 function changeTidbitText(color) {
