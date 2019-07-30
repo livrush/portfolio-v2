@@ -2,17 +2,17 @@ const aboutOptions = {
   red: {
     hex: '#cf9c9c',
     text: [
-      'Over two years of',
+      'Over two years',
       'experience teaching',
-      'JavaScript software',
-      'engineering',
+      'software development',
+      'with JavaScript',
     ],
   },
   orange: {
     hex: '#e5ba9c',
     text: [
-      'Performed as a',
-      'professional dancer',
+      'Professional dancer',
+      'with performances',
       'in St.Petersburg,',
       'Berlin, and Seoul',
     ],
@@ -54,6 +54,20 @@ const aboutOptions = {
   },
 };
 
+let currentIndex = 0;
+
+function updateCurrentIndex(direction) {
+  const max = Object.keys(aboutOptions).length - 1;
+  switch(direction) {
+    case 'up':
+      currentIndex = currentIndex === max ? 0 : currentIndex + 1;
+      break;
+    case 'down':
+      currentIndex = currentIndex === 0 ? max : currentIndex - 1;
+      break;
+  }
+}
+
 function toggleSeptagon() {
   document.getElementById('septagon').remove();
   document.getElementsByClassName('about-info-container')[0].style.display = 'initial';
@@ -86,7 +100,9 @@ function resetTidbitAnimation() {
   el.classList.add('animated');
 }
 
-function changeAboutOption(color) {
+function changeAboutOption(direction) {
+  updateCurrentIndex(direction);
+  const color = Object.keys(aboutOptions)[currentIndex];
   const el = document.getElementsByClassName('about-info-container')[0];
   el.style.display = 'none';
   changeBackgroundColor(color);
@@ -95,3 +111,24 @@ function changeAboutOption(color) {
   resetTidbitAnimation();
   el.style.display = 'initial';
 }
+
+
+
+document.getElementById('septagon').addEventListener('click', () => {
+  toggleSeptagon();
+  changeAboutOption();
+});
+
+document.body.addEventListener('keyup', (e) => {
+  console.log(e);
+  if (e.keyCode === 37) changeAboutOption();
+  else if (e.keyCode === 39) changeAboutOption();
+});
+
+document
+  .getElementsByClassName('corner bottom left')[0]
+  .addEventListener('click', () => changeAboutOption('down'));
+
+document
+  .getElementsByClassName('corner bottom right')[0]
+  .addEventListener('click', () => changeAboutOption('up'));
