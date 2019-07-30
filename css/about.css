@@ -247,7 +247,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /* line 103, ../sass/about.scss */
 .image {
   background-color: #fafafa;
-  background-image: url("/images/about/blue.jpg");
   background-size: cover;
   background-position: center;
   height: 20rem;
@@ -260,7 +259,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   animation-iteration-count: 1;
 }
 
-/* line 120, ../sass/about.scss */
+/* line 119, ../sass/about.scss */
 .image-shadow {
   background: #fafafa;
   position: absolute;
@@ -271,27 +270,27 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   animation-fill-mode: forwards;
   animation-iteration-count: 1;
 }
-/* line 125, ../sass/about.scss */
+/* line 124, ../sass/about.scss */
 .image-shadow.top {
   animation-name: shadow-slide--pos;
 }
-/* line 128, ../sass/about.scss */
+/* line 127, ../sass/about.scss */
 .image-shadow.bottom {
   animation-name: shadow-slide--neg;
 }
 
-/* line 138, ../sass/about.scss */
+/* line 137, ../sass/about.scss */
 .tidbit-container {
   opacity: 0;
   width: 100%;
   z-index: 5;
 }
-/* line 139, ../sass/about.scss */
+/* line 138, ../sass/about.scss */
 .tidbit-container.animated {
   animation-delay: 0.5s;
 }
 
-/* line 149, ../sass/about.scss */
+/* line 148, ../sass/about.scss */
 .tidbit-line {
   color: #222;
   font-family: 'Abril Fatface';
@@ -302,7 +301,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   text-shadow: 2px 2px #fafafa;
 }
 
-/* line 160, ../sass/about.scss */
+/* line 159, ../sass/about.scss */
 .septagon:hover {
   cursor: pointer;
 }

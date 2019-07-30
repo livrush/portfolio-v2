@@ -69,7 +69,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 /* line 9, ../sass/home.scss */
 html {
-  background: url("/images/milk-back-white.png");
+  background: url("../images/milk-back-white.png");
   background-size: 160px;
 }
 
