@@ -177,7 +177,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 /* line 47, ../sass/about.scss */
-.page-center, .image-container, .tidbit-container, .sept-container {
+.page-center, .corner-button, .tidbit-image-section-container, .tidbit-container, .sept-container {
   left: 50%;
   position: absolute;
   top: 50%;
@@ -185,7 +185,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 /* line 54, ../sass/about.scss */
-.fade-in--slow-right--animation, .image-container, .tidbit-container.animated {
+.fade-in--slow-right--animation, .tidbit-image-section-container, .tidbit-container.animated {
   animation-name: fade-in--down-right;
   animation-duration: 1s;
   animation-fill-mode: forwards;
@@ -198,26 +198,40 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   width: 4rem;
   position: absolute;
   background: #fafafa;
+  cursor: pointer;
 }
-/* line 70, ../sass/about.scss */
+/* line 71, ../sass/about.scss */
 .corner.top {
   top: 0;
 }
-/* line 71, ../sass/about.scss */
+/* line 72, ../sass/about.scss */
 .corner.left {
   left: 0;
 }
-/* line 72, ../sass/about.scss */
+/* line 73, ../sass/about.scss */
 .corner.right {
   right: 0;
 }
-/* line 73, ../sass/about.scss */
+/* line 74, ../sass/about.scss */
 .corner.bottom {
   bottom: 0;
 }
 
-/* line 76, ../sass/about.scss */
-.image-container {
+/* line 77, ../sass/about.scss */
+.corner-button {
+  height: 2rem;
+  width: 2rem;
+  opacity: 0;
+  padding: 1rem;
+  transition: 1s;
+}
+/* line 83, ../sass/about.scss */
+.corner-button:hover {
+  opacity: 1;
+}
+
+/* line 88, ../sass/about.scss */
+.tidbit-image-section-container {
   align-items: center;
   background: #fafafa;
   border: 5px solid #fafafa;
@@ -225,7 +239,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   justify-content: center;
 }
 
-/* line 87, ../sass/about.scss */
+/* line 99, ../sass/about.scss */
+.tidbit-image-container {
+  overflow: hidden;
+}
+
+/* line 103, ../sass/about.scss */
 .image {
   background-color: #fafafa;
   background-image: url("/images/about/blue.jpg");
@@ -241,7 +260,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   animation-iteration-count: 1;
 }
 
-/* line 104, ../sass/about.scss */
+/* line 120, ../sass/about.scss */
 .image-shadow {
   background: #fafafa;
   position: absolute;
@@ -252,27 +271,27 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   animation-fill-mode: forwards;
   animation-iteration-count: 1;
 }
-/* line 109, ../sass/about.scss */
+/* line 125, ../sass/about.scss */
 .image-shadow.top {
   animation-name: shadow-slide--pos;
 }
-/* line 112, ../sass/about.scss */
+/* line 128, ../sass/about.scss */
 .image-shadow.bottom {
   animation-name: shadow-slide--neg;
 }
 
-/* line 122, ../sass/about.scss */
+/* line 138, ../sass/about.scss */
 .tidbit-container {
   opacity: 0;
   width: 100%;
   z-index: 5;
 }
-/* line 123, ../sass/about.scss */
+/* line 139, ../sass/about.scss */
 .tidbit-container.animated {
   animation-delay: 0.5s;
 }
 
-/* line 133, ../sass/about.scss */
+/* line 149, ../sass/about.scss */
 .tidbit-line {
   color: #222;
   font-family: 'Abril Fatface';
@@ -283,14 +302,19 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   text-shadow: 2px 2px #fafafa;
 }
 
-/* line 143, ../sass/about.scss */
+/* line 160, ../sass/about.scss */
+.septagon:hover {
+  cursor: pointer;
+}
+
+/* line 165, ../sass/about.scss */
 .sept-container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* line 150, ../sass/about.scss */
+/* line 172, ../sass/about.scss */
 .sept {
   position: absolute;
   animation-name: grow;
@@ -299,11 +323,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   animation-iteration-count: 1;
   animation-timing-function: ease-in;
 }
-/* line 157, ../sass/about.scss */
+/* line 179, ../sass/about.scss */
 .sept.delay-1 {
   animation-delay: 1s;
 }
-/* line 160, ../sass/about.scss */
+/* line 182, ../sass/about.scss */
 .sept.delay-2 {
   animation-delay: 2s;
 }
